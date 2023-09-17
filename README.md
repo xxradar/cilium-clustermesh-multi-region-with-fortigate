@@ -169,6 +169,7 @@ watch kubectl get po -n app-routable-demo -o wide
 <p align="center">
 <img src="./images/microservice-mesh.png"  width="600" align="center" /><br>
 </p>
+<br>
 Annotate a service (zone1)
 ```
   annotations:
