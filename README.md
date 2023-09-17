@@ -18,8 +18,8 @@ Give it some minutes. The `terraform output` will provide login details and IP a
 ### Create an allow_all outbound rule
 <details>
 <summary>Create on both firewall an address resource representing the private networks.</summary>
-- 'eu-west-3' -> `10.1.1.0/24`<br>
-- `eu-west-1` -> `10.2.1.0/24`<br>
+- eu-west-3 -> 10.1.1.0/24<br>
+- eu-west-1 -> 10.2.1.0/24<br>
 <p align="center">
 <img src="./images/private_network.png"  width="600" />
 </p> <br>
