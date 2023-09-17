@@ -1,5 +1,5 @@
 # Cilium Clustermesh multi-region using Fortinet Fortigate VPN in AWS
-## Intruduction
+## Introduction
 <p align="center">
 <img src="./images/clustermesh.png"  width="800" />
 </p> <br>
@@ -22,6 +22,8 @@ Give it some minutes. The `terraform output` will provide login details and IP a
 <summary>Create on both firewall an address resource representing the private networks.</summary>
 - eu-west-3 (fgtsingle1) -> 10.1.1.0/24<br>
 - eu-west-1 (fgtsingle2) -> 10.2.1.0/24<br>
+<br>
+<br>
 <p align="center">
 <img src="./images/private_network.png"  width="600" />
 </p> <br>
