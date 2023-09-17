@@ -38,7 +38,7 @@ Give it some minutes. The `terraform output` will provide login details and IP a
 
 ### Create a VPN IPSEC tunnel
 <details>
-<summary>IPSEC VPN setup using IPSEC wizard</summary>
+<summary>IPSEC VPN setup using VPN wizard</summary>
 
 <p align="center">
 <img src="./images/vpn-setup-1.png"  width="1000" align="center" /><br>
