@@ -79,7 +79,7 @@ rm hubble-linux-amd64.tar.gz{,.sha256sum}
 sudo snap install helm --classic
 helm repo add cilium https://helm.cilium.io/
 ```
-### Install Ciliun CNI on cluster1
+### Install Cilium CNI on cluster1
 ```
 helm install cilium cilium/cilium --version 1.14.2 \
     --namespace kube-system \
@@ -101,7 +101,7 @@ helm install cilium cilium/cilium --version 1.14.2 \
     --set cluster.id=1 \
     --set cluster.name="cluster1"
 ```
-### Install Ciliun CNI on cluster2
+### Install Cilium CNI on cluster2
 ```
 helm install cilium cilium/cilium --version 1.14.2 \
     --namespace kube-system \
