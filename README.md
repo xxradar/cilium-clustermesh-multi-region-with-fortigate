@@ -25,9 +25,9 @@ Create on both firewall an `address` representing the private networks.<br>
 <p align="center">
 <img src="./images/private_network.png"  width="600" />
 </p> <br>
-Create an `allow all` firewall rule.<br>
+Create an outbound firewall rule.<br>
 <p align="center">
-<img src="./images/allow-all.png"  width="400" align="center" />
+<img src="./images/allow-all.png"  width="600" align="center" />
 </p> <br>
 ### Create a VPN IPSEC tunnel
 
