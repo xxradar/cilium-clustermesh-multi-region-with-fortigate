@@ -163,11 +163,19 @@ cd ./app_routable_demo
 watch kubectl get po -n app-routable-demo -o wide
 ```
 ## Testing the clustermesh
+
+<p align="center">
+<img src="./images/microservice-mesh.png"  width="1000" align="center" /><br>
 Annotate a service (zone1)
 ```
   annotations:
     service.cilium.io/global: "true"
     service.cilium.io/shared: "true"
+```
+You can test this:
+```
+kubectl run -it -n app-routable-demo --rm --image xxradar/hackon mycurler -- bash
+       curl -v -H "Cookie: loc=client" http://zone1/app3
 ```
 Annotate a service (zone1)
 ```
