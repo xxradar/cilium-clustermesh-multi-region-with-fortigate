@@ -11,12 +11,7 @@ cd fgtsingle1
 terraform init
 terraform apply 
 ```
-repeat the process for AWS region `eu-west-1`
-```
-cd fgtsingle2
-terraform init
-terraform apply 
-```
+repeat the process for AWS region `eu-west-1` (fgtsingle2)<br>
 Give it some minutes. The `terraform output` will provide login details and IP address of the Fortigates.
 
 ## Configuring the Fortigates
