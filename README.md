@@ -49,7 +49,9 @@ Give it some minutes. The `terraform output` will provide login details and IP a
 </details>
 
 ## Deploying kubernetes and jumpbox
-In the next step, a 3-node kubernetes cluster is deployed, together with a jumpbox and backend test server.
+In the next step, a 3-node kubernetes cluster is deployed, together with a jumpbox and backend test server.<br>
+Rename terraform.tfvars.example to terraform.tfvars and populate the variables.<br>
+The information can be obtained from the `terraform out` for both fortigate deployments.
 ```
 cd terraform-k8s-1
 terraform init
