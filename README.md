@@ -48,7 +48,7 @@ Give it some minutes. The `terraform output` will provide login details and IP a
 </p> <br>
 </details>
 
-## Deploying kubernetes adn jumpbox
+## Deploying kubernetes and jumpbox
 In the next step, a 3-node kubernetes cluster is deployed, together with a jumpbox and backend test server.
 ```
 cd terraform-k8s-1
