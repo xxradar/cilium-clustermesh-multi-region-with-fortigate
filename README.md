@@ -41,9 +41,9 @@ Give it some minutes. The `terraform output` will provide login details and IP a
 <summary>IPSEC VPN setup using IPSEC wizard</summary>
 
 <p align="center">
-<img src="./images/vpn-setup-1.png"  width="600" align="center" /><br>
-<img src="./images/vpn-setup-2.png"  width="600" align="center" /><br>
-<img src="./images/vpn-setup-3.png"  width="600" align="center" /><br>
-<img src="./images/vpn-setup-4.png"  width="600" align="center" /><br>
+<img src="./images/vpn-setup-1.png"  width="1000" align="center" /><br>
+<img src="./images/vpn-setup-2.png"  width="1000" align="center" /><br>
+<img src="./images/vpn-setup-3.png"  width="1000" align="center" /><br>
+<img src="./images/vpn-setup-4.png"  width="1000" align="center" /><br>
 </p> <br>
 </details>
