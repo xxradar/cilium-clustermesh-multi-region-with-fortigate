@@ -1,5 +1,5 @@
 # Cilium Clustermesh multi-region using Fortinet Fortigate VPN in AWS
-## Intruduction
+## Introduction
 <p align="center">
 <img src="./images/clustermesh.png"  width="800" />
 </p> <br>
