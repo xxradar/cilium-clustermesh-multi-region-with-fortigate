@@ -1,5 +1,4 @@
-# Cilium Clustermesh 
-# A multi-region using a Fortigate VPN in AWS
+# Cilium Clustermesh - A multi-region deployment using a Fortigate VPN in AWS
 ## Introduction
 <p align="center">
 <img src="./images/clustermesh.png"  width="800" />
