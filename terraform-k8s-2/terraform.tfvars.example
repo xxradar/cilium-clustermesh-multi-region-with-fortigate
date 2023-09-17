@@ -1,0 +1,9 @@
+access_key = "<aws_access_key>"
+secret_key = "<aws_secret_key>"
+prefix = "k8s"
+environment = "dev"
+
+# FGT infrastructure details
+privatesubnet = "<privatesubnetid_from_fgt_infra>"
+publicsubnet = "<publicsubnetid_from_fgt_infra>"
+vpcid = "vpcid_from_fgt_infra>"
