@@ -61,6 +61,7 @@ Repeat process for terraform-k8s-2
 
 ## Deploying the clustermesh
 ### Install pre-requisite tooling
+On both clusters:
 ```
 CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/main/stable.txt)
 CLI_ARCH=amd64
