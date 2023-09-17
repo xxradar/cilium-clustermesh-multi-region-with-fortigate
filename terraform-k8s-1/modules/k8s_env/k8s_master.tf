@@ -16,7 +16,7 @@ resource "aws_instance" "k8s_master" {
   user_data = <<EOF
 #!/bin/bash
 sudo apt-get update
-sudo apt-get install -y  jq curl net-tools software-properties-common iputils-ping git
+sudo apt-get install -y  jq curl net-tools software-properties-common iputils-ping git vim nano
 curl https://raw.githubusercontent.com/xxradar/install_k8s_ubuntu/main/setup_latest.sh | bash
 sudo mkdir -p /home/ubuntu/.kube
 sudo cp -i /etc/kubernetes/admin.conf /home/ubuntu/.kube/config
