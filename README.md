@@ -21,6 +21,6 @@ Give it some minutes. The `terraform output` will provide login details and IP a
 
 ## Configuring the Fortigates
 ### Create an allow_all outbound rule
-![allow_all](./images/all-all.png)
+![allow_all](./images/allow-all.png)
 ### Create a VPN IPSEC tunnel
 
