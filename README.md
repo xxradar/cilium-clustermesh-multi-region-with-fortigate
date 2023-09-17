@@ -1,6 +1,8 @@
 # Cilium Clustermesh multi-region using Fortinet Fortigate VPN in AWS
 ## Intruduction
-This tutorial ...
+<p align="center">
+<img src="./images/clustermesh.png"  width="800" />
+</p> <br>
 
 ## Setting up the network and fortigate infrastructure
 Next terraform plan will create a public and private network and deploy a PAYG fortigate instance.<br>
