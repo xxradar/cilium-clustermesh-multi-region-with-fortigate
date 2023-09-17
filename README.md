@@ -28,8 +28,8 @@ Give it some minutes. The `terraform output` will provide login details and IP a
   <summary>Create an outbound firewall rule.</summary>
 <p align="center">
 <img src="./images/allow-all.png"  width="600" align="center" />
+<img src="./images/allow-all-rule.png"  width="600" align="center" />
 </p> <br>
 </details>
-
 ### Create a VPN IPSEC tunnel
 
