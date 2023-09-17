@@ -24,6 +24,6 @@ Give it some minutes. The `terraform output` will provide login details and IP a
 Create on both firewall an `address` representing the private networks.
 ![allow_all](./images/private_network.png | width=50)
 Create an `allow all` firewall rule.
-![allow_all](./images/allow-all.png | width=50))
+![allow_all](./images/allow-all.png | width=50)
 ### Create a VPN IPSEC tunnel
 
