@@ -13,7 +13,7 @@ terraform apply
 ```
 repeat the process for AWS region `eu-west-1`
 ```
-cd fgtsingle1
+cd fgtsingle2
 terraform init
 terraform apply 
 ```
