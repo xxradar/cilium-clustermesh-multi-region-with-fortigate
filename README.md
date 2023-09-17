@@ -21,10 +21,12 @@ Give it some minutes. The `terraform output` will provide login details and IP a
 
 ## Configuring the Fortigates
 ### Create an allow_all outbound rule
-Create on both firewall an `address` representing the private networks.<br>
+<details>
+  <summary>Create on both firewall an `address` representing the private networks.</summary>
 <p align="center">
 <img src="./images/private_network.png"  width="600" />
 </p> <br>
+</details>details>
 Create an outbound firewall rule.<br>
 <p align="center">
 <img src="./images/allow-all.png"  width="600" align="center" />
