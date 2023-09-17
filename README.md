@@ -48,6 +48,14 @@ Give it some minutes. The `terraform output` will provide login details and IP a
 </p> <br>
 </details>
 
+## Deploying kubernetes
+```
+cd terraform-k8s-1
+terraform init
+terraform apply
+```
+Repeat process for terraform-k8s-2
+
 ## Deploying the clustermesh
 ### Install pre-requisite tooling
 ```
