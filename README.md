@@ -167,9 +167,10 @@ watch kubectl get po -n app-routable-demo -o wide
 ## Testing the clustermesh
 
 <p align="center">
-<img src="./images/microservice-mesh.png"  width="600" align="center" /><br>
+<img src="./images/microservice-mesh.png"  width="600" align="center" />
 </p>
 <br>
+
 Annotate a service (zone1)
 ```
   annotations:
