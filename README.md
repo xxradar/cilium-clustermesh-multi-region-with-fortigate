@@ -17,4 +17,9 @@ cd fgtsingle2
 terraform init
 terraform apply 
 ```
-Give it some minutes. The `terraform output` will provide login details and IP address of the Fortigates
+Give it some minutes. The `terraform output` will provide login details and IP address of the Fortigates.
+
+## Configuring the Fortigates
+### Create an allow_all outbound rule
+### Create a VPN IPSEC tunnel
+
