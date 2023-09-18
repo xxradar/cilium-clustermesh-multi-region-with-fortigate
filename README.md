@@ -146,7 +146,7 @@ cp .kube/config cluster1.yaml
 touch cluster2.yaml
 ```
 copy/paste `.kube/config` content (cluster2) into `cluster2.yaml`<br>
-We now have a copy of both kubeconfig file stored in respectively `cluster1.yaml` and `cluster2.yaml`<r>
+We now have a copy of both kubeconfig files stored in respectively `cluster1.yaml` and `cluster2.yaml`<r>
 <br>
 
 ### Create unique context, user and cluster references in both files
