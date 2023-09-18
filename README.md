@@ -137,6 +137,7 @@ Combine both `.kube/config` files
 - make sure usernames are differemt
 - make sure context names are different
 <br>
+
 Follow these steps:
 ```
 cp .kube/config cluster1.yaml
