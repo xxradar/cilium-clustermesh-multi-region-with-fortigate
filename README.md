@@ -146,14 +146,33 @@ Combine both `.kube/config` files
 - make sure usernames are differemt
 - make sure context names are different
 ```
-export KUBECONFIG-$PWD/kubeconfig.yaml
+cp .kube/config cluster1.yaml
+```
+```
+touch cluster2.yaml
+```
+copy/paste `.kube/config` content (cluster2) into `cluster2.yaml`
+
+```
+sed -i 's/kubernetes/kubernetes1/g' cluster1.yaml
+sed -i 's/kubernetes/kubernetes2/g' cluster2.yaml
+```
+```
+export KUBECONFIG=./cluster1.yaml:./cluster2.yaml
 ```
 ```
 ~$ kubectl config get-contexts
 CURRENT   NAME                           CLUSTER       AUTHINFO            NAMESPACE
-*         kubernetes-admin@kubernetes1   kubernetes1   kubernetes-admin1
-          kubernetes-admin@kubernetes2   kubernetes2   kubernetes-admin2
+*         kubernetes1-admin@kubernetes1   kubernetes1   kubernetes-admin1
+          kubernetes2-admin@kubernetes2   kubernetes2   kubernetes-admin2
 ```
+```
+cilium clustermesh connect --context kubernetes1-admin@kubernetes1 --destination-context kubernetes2-admin@kubernetes2
+```
+```
+export KUBECONFIG-$PWD/kubeconfig.yaml
+```
+
 ### Connect both clusters
 ```
 cilium clustermesh connect --context kubernetes-admin@kubernetes1 --destination-context kubernetes-admin@kubernetes2
