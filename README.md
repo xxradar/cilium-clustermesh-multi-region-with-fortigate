@@ -145,12 +145,16 @@ cp .kube/config cluster1.yaml
 ```
 touch cluster2.yaml
 ```
-copy/paste `.kube/config` content (cluster2) into `cluster2.yaml`
+copy/paste `.kube/config` content (cluster2) into `cluster2.yaml`<br>
+We now have a copy of both kubeconfig file stored in respectively `cluster1.yaml` and `cluster2.yaml`<r>
+<br>
 
+### Create unique contet, user and cluster references in both files
 ```
 sed -i 's/kubernetes/kubernetes1/g' cluster1.yaml
 sed -i 's/kubernetes/kubernetes2/g' cluster2.yaml
 ```
+### Load the KUBECONFIG 
 ```
 export KUBECONFIG=./cluster1.yaml:./cluster2.yaml
 ```
@@ -160,16 +164,9 @@ CURRENT   NAME                           CLUSTER       AUTHINFO            NAMES
 *         kubernetes1-admin@kubernetes1   kubernetes1   kubernetes-admin1
           kubernetes2-admin@kubernetes2   kubernetes2   kubernetes-admin2
 ```
-```
-cilium clustermesh connect --context kubernetes1-admin@kubernetes1 --destination-context kubernetes2-admin@kubernetes2
-```
-```
-export KUBECONFIG-$PWD/kubeconfig.yaml
-```
-
 ### Connect both clusters
 ```
-cilium clustermesh connect --context kubernetes-admin@kubernetes1 --destination-context kubernetes-admin@kubernetes2
+cilium clustermesh connect --context kubernetes1-admin@kubernetes1 --destination-context kubernetes2-admin@kubernetes2
 ```
 ### Deploy demo app
 ```
