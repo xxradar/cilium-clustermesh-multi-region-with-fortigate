@@ -156,7 +156,7 @@ sed -i 's/kubernetes/kubernetes2/g' cluster2.yaml
 ```
 ### Load the KUBECONFIG 
 ```
-export KUBECONFIG=./cluster1.yaml:./cluster2.yaml
+export KUBECONFIG=$PWD/cluster1.yaml:$PWD/cluster2.yaml
 ```
 ```
 ~$ kubectl config get-contexts
