@@ -182,6 +182,7 @@ watch kubectl get po -n app-routable-demo -o wide
 </p>
 <br>
 
+### Enable sharing
 Annotate a service (zone1)
 ```
   annotations:
@@ -193,6 +194,8 @@ You can test this:
 kubectl run -it -n app-routable-demo --rm --image xxradar/hackon mycurler -- bash
        curl -v -H "Cookie: loc=client" http://zone1/app3
 ```
+
+### Disable sharing
 Annotate a service (zone1)
 ```
   annotations:
