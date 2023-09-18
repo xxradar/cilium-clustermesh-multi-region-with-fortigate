@@ -131,20 +131,13 @@ On both clusters:
 ```
 cilium clustermesh enable --service-type NodePort
 ```
-### Rename the context 
-On cluster1:
-```
-kubectl config rename-context kubernetes-admin@kubernetes kubernetes-admin@kubernetes1
-```
-On cluster2:
-```
-kubectl config rename-context kubernetes-admin@kubernetes kubernetes-admin@kubernetes2
-```
 ### Create a kubeconfig with access to both clusters
 Combine both `.kube/config` files
 - make sure clusternames are different
 - make sure usernames are differemt
 - make sure context names are different
+<br>
+Follow these steps:
 ```
 cp .kube/config cluster1.yaml
 ```
