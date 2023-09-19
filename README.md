@@ -194,6 +194,7 @@ Additionally, you need to create a firewall rule allowing access from the intern
 
 - Fortigate provides basic L4 load-balancing through the Virtual server load balance feature
 - Fortigate supports an AWS (and Kubernetes) SDN connector to dynamically populate the K8S nodes.
+- Support for IPS (and other NG features) and basic WAF capabilities.
 
 <p align="center">
 <img src="./images/load-balancer.png"  width="400" align="center" /><br>
