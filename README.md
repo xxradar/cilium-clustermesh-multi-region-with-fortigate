@@ -174,6 +174,7 @@ CURRENT   NAME                           CLUSTER       AUTHINFO            NAMES
 cilium clustermesh connect --context kubernetes1-admin@kubernetes1 --destination-context kubernetes2-admin@kubernetes2
 ```
 ## Deploy demo app
+Deploy a demo app, based on [https://github.com/xxradar/app_routable_demo](https://github.com/xxradar/app_routable_demo)
 ```
 git clone https://github.com/xxradar/app_routable_demo.git
 cd ./app_routable_demo
@@ -181,7 +182,8 @@ cd ./app_routable_demo
 watch kubectl get po -n app-routable-demo -o wide
 ```
 
-Optionally configure Cilium Ingress
+### Optionally: 
+configure Cilium Ingress
 ```
 kubectl apply -f ./app_routable_demo/ingress_cilium.yaml
 ```
