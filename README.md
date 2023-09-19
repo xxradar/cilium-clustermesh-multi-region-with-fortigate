@@ -64,6 +64,7 @@ Repeat process for terraform-k8s-2
 On both clusters:
 <details>
 <summary>Install required tooling </summary>
+
 ```
 CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/main/stable.txt)
 CLI_ARCH=amd64
