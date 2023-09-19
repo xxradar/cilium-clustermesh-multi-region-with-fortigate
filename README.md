@@ -622,3 +622,78 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
 ```
   
 </details>
+
+
+# Ingress testing
+```
+% curl 35.180.16.215/app2   #fgtsingle1_eip
+{
+  "path": "/app2",
+  "headers": {
+    "x-forwarded-for": "84.192.8.14, 10.10.2.138, 10.10.2.183, 10.10.1.22",
+    "cookie": ", loc=zone1, loc=zone2, loc=zone5",
+    "host": "zone7",
+    "connection": "close",
+    "user-agent": "curl/8.1.2",
+    "accept": "*/*",
+    "x-forwarded-proto": "http",
+    "x-envoy-external-address": "84.192.8.14",
+    "x-request-id": "7cb335aa-a6b5-43ac-aa33-265220a46259"
+  },
+  "method": "GET",
+  "body": "",
+  "fresh": false,
+  "hostname": "zone7",
+  "ip": "84.192.8.14",
+  "ips": [
+    "84.192.8.14",
+    "10.10.2.138",
+    "10.10.2.183",
+    "10.10.1.22"
+  ],
+  "protocol": "http",
+  "query": {},
+  "subdomains": [],
+  "xhr": false,
+  "os": {
+    "hostname": "echoserver-2-deployment-6f499cfbbb-x5pkw"
+  },
+  "connection": {}
+}
+```
+```
+% curl 34.242.99.90/app1   #fgtsingle2_eip
+{
+  "path": "/app1",
+  "headers": {
+    "x-forwarded-for": "84.192.8.14, 10.12.2.54, 10.12.0.40, 10.12.0.239",
+    "cookie": ", loc=zone1, loc=zone2, loc=zone4",
+    "host": "zone6",
+    "connection": "close",
+    "user-agent": "curl/8.1.2",
+    "accept": "*/*",
+    "x-forwarded-proto": "http",
+    "x-envoy-external-address": "84.192.8.14",
+    "x-request-id": "b45d921d-a2e4-4a98-963e-04cf2e345ee5"
+  },
+  "method": "GET",
+  "body": "",
+  "fresh": false,
+  "hostname": "zone6",
+  "ip": "84.192.8.14",
+  "ips": [
+    "84.192.8.14",
+    "10.12.2.54",
+    "10.12.0.40",
+    "10.12.0.239"
+  ],
+  "protocol": "http",
+  "query": {},
+  "subdomains": [],
+  "xhr": false,
+  "os": {
+    "hostname": "echoserver-1-deployment-695c7db8d-ljnw6"
+  },
+  "connection": {}
+}
+```
