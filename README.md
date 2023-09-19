@@ -664,7 +664,7 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
 ```
 #### fgtsingle2_eip
 ```
-% curl 34.242.99.90/app1   #fgtsingle2_eip
+% curl 34.242.99.90/app1
 {
   "path": "/app1",
   "headers": {
