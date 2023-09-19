@@ -181,10 +181,7 @@ cd ./app_routable_demo
 watch kubectl get po -n app-routable-demo -o wide
 ```
 
-Optional:
-<details>
-<summary>Configure Cilium Ingress</summary>
-  
+Optionally configure Cilium Ingress
 ```
 kubectl apply -f ./app_routable_demo/ingress_cilium.yaml
 ```
@@ -192,8 +189,6 @@ Additionally, you need to create a firewall rule allowing access from the intern
 <p align="center">
 <img src="./images/ingress-fw-rule.png  width="1000" align="center" /><br>
 </p> <br>
-
-</details>
 
 ## Testing the clustermesh
 ### Enable sharing
