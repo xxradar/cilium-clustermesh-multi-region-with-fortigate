@@ -626,7 +626,7 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
 
 # Ingress testing
 <details>
-<summary>Igress results </summary>
+<summary>Ingress results </summary>
   
 #### fgtsingle1_eip
 ```
