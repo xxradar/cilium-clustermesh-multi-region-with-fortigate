@@ -174,7 +174,7 @@ CURRENT   NAME                           CLUSTER       AUTHINFO            NAMES
 cilium clustermesh connect --context kubernetes1-admin@kubernetes1 --destination-context kubernetes2-admin@kubernetes2
 ```
 ## Deploy demo app
-Deploy a demo app, based on [https://github.com/xxradar/app_routable_demo](https://github.com/xxradar/app_routable_demo)
+Deploy a demo app, based on [https://github.com/xxradar/app_routable_demo](https://github.com/xxradar/app_routable_demo) on **both K8S clusters**
 ```
 git clone https://github.com/xxradar/app_routable_demo.git
 cd ./app_routable_demo
@@ -194,6 +194,11 @@ Additionally, you need to create a firewall rule allowing access from the intern
 
 ## Testing the clustermesh
 ### Enable sharing
+The ultimate goal is to create following app deployment.<br>
+<p align="center">
+<img src="./images/microservice-mesh.png"  width="1000" align="center" /><br>
+</p> 
+
 Annotate a service (zone1)
 ```
   annotations:
