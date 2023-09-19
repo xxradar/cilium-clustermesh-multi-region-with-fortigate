@@ -173,17 +173,30 @@ CURRENT   NAME                           CLUSTER       AUTHINFO            NAMES
 ```
 cilium clustermesh connect --context kubernetes1-admin@kubernetes1 --destination-context kubernetes2-admin@kubernetes2
 ```
-### Deploy demo app
+## Deploy demo app
 ```
 git clone https://github.com/xxradar/app_routable_demo.git
 cd ./app_routable_demo
 ./setup.sh
 watch kubectl get po -n app-routable-demo -o wide
 ```
+Optional:
+<details>
+<summary>Configure Cilium Ingress</summary>
+```
+kubectl apply -f ./app_routable_demo/ingress_cilium.yaml
+```
+Additionally, you need to create a firewall rule allowing access from the internet towards the ingress nodeports.
+<p align="center">
+<img src="./images/vpn-setup-1.png"  width="1000" align="center" /><br>
+
+</p> <br>
+</details>details>
+
 ## Testing the clustermesh
 
 <p align="center">
-<img src="./images/microservice-mesh.png"  width="600" align="center" />
+<img src="./images/ingress-fw-rule.png"  width="600" align="center" />
 </p>
 <br>
 
