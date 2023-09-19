@@ -196,7 +196,7 @@ Additionally, you need to create a firewall rule allowing access from the intern
 - Fortigate supports an AWS (and Kubernetes) SDN connector to dynamically populate the K8S nodes.
 
 <p align="center">
-<img src="./images/load-balancer.png"  width="600" align="center" /><br>
+<img src="./images/load-balancer.png"  width="400" align="center" /><br>
 </p> 
 
 ## Testing the clustermesh
