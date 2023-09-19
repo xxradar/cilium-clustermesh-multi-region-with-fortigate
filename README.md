@@ -238,6 +238,23 @@ kubectl run -it -n app-routable-demo --rm --image xxradar/hackon mycurler -- bas
        curl -v -H "Cookie: loc=client" http://zone1/app3
 ```
 
+<details>
+<summary>Result cluster1 </summary><br>
+
+```
+result 1
+```
+  
+</details>
+
+<details>
+<summary>Result cluster2 </summary><br>
+
+```
+result 2
+```
+  
+</details>
 ### Disable sharing
 Annotate a service (zone1)
 ```
@@ -251,3 +268,20 @@ kubectl run -it -n app-routable-demo --rm --image xxradar/hackon mycurler -- bas
        curl -v -H "Cookie: loc=client" http://zone1/app3
 ```
 
+<details>
+<summary>Result cluster1 </summary><br>
+
+```
+result 1
+```
+  
+</details>
+
+<details>
+<summary>Result cluster2 </summary><br>
+
+```
+result 2
+```
+  
+</details>
