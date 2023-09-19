@@ -259,7 +259,8 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
   },
   "connection": {}
 * Connection #0 to host zone1 left intact
-}```
+}
+```
   
 </details>
 
