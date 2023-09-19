@@ -211,8 +211,55 @@ kubectl run -it -n app-routable-demo --rm --image xxradar/hackon mycurler -- bas
 <summary>Result cluster1 </summary><br>
 
 ```
-result 1
-```
+root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
+*   Trying 10.100.23.232:80...
+* Connected to zone1 (10.100.23.232) port 80 (#0)
+> GET /app3 HTTP/1.1
+> Host: zone1
+> User-Agent: curl/7.81.0
+> Accept: */*
+> Cookie: loc=client
+>
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: nginx/1.25.2
+< Date: Tue, 19 Sep 2023 10:44:51 GMT
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 600
+< Connection: keep-alive
+< X-Powered-By: Express
+< ETag: W/"258-zGzwAESu1cvKemzgO8W6mCBaWZQ"
+<
+{
+  "path": "/app3",
+  "headers": {
+    "x-forwarded-for": "10.10.2.91, 10.10.2.183, 10.10.1.240",
+    "cookie": "loc=client, loc=zone1, loc=zone3, loc=zone5",
+    "host": "zone7",
+    "connection": "close",
+    "user-agent": "curl/7.81.0",
+    "accept": "*/*"
+  },
+  "method": "GET",
+  "body": "",
+  "fresh": false,
+  "hostname": "zone7",
+  "ip": "10.10.2.91",
+  "ips": [
+    "10.10.2.91",
+    "10.10.2.183",
+    "10.10.1.240"
+  ],
+  "protocol": "http",
+  "query": {},
+  "subdomains": [],
+  "xhr": false,
+  "os": {
+    "hostname": "echoserver-2-deployment-6f499cfbbb-7kztt"
+  },
+  "connection": {}
+* Connection #0 to host zone1 left intact
+}```
   
 </details>
 
@@ -220,7 +267,103 @@ result 1
 <summary>Result cluster2 </summary><br>
 
 ```
-result 2
+root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
+*   Trying 10.96.245.46:80...
+* Connected to zone1 (10.96.245.46) port 80 (#0)
+> GET /app3 HTTP/1.1
+> Host: zone1
+> User-Agent: curl/7.81.0
+> Accept: */*
+> Cookie: loc=client
+>
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: nginx/1.25.2
+< Date: Tue, 19 Sep 2023 10:44:49 GMT
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 593
+< Connection: keep-alive
+< X-Powered-By: Express
+< ETag: W/"251-IE7zC2Tif6dhLPEYr0JMi8HMYYM"
+<
+{
+  "path": "/app3",
+  "headers": {
+    "x-forwarded-for": "10.12.2.8, 10.12.0.40, 10.12.2.16",
+    "cookie": "loc=client, loc=zone1, loc=zone3, loc=zone5",
+    "host": "zone7",
+    "connection": "close",
+    "user-agent": "curl/7.81.0",
+    "accept": "*/*"
+  },
+  "method": "GET",
+  "body": "",
+  "fresh": false,
+  "hostname": "zone7",
+  "ip": "10.12.2.8",
+  "ips": [
+    "10.12.2.8",
+    "10.12.0.40",
+    "10.12.2.16"
+  ],
+  "protocol": "http",
+  "query": {},
+  "subdomains": [],
+  "xhr": false,
+  "os": {
+    "hostname": "echoserver-2-deployment-6f499cfbbb-fqh25"
+  },
+  "connection": {}
+* Connection #0 to host zone1 left intact
+}root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
+*   Trying 10.96.245.46:80...
+* Connected to zone1 (10.96.245.46) port 80 (#0)
+> GET /app3 HTTP/1.1
+> Host: zone1
+> User-Agent: curl/7.81.0
+> Accept: */*
+> Cookie: loc=client
+>
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: nginx/1.25.2
+< Date: Tue, 19 Sep 2023 10:44:49 GMT
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 593
+< Connection: keep-alive
+< X-Powered-By: Express
+< ETag: W/"251-IE7zC2Tif6dhLPEYr0JMi8HMYYM"
+<
+{
+  "path": "/app3",
+  "headers": {
+    "x-forwarded-for": "10.12.2.8, 10.12.0.40, 10.12.2.16",
+    "cookie": "loc=client, loc=zone1, loc=zone3, loc=zone5",
+    "host": "zone7",
+    "connection": "close",
+    "user-agent": "curl/7.81.0",
+    "accept": "*/*"
+  },
+  "method": "GET",
+  "body": "",
+  "fresh": false,
+  "hostname": "zone7",
+  "ip": "10.12.2.8",
+  "ips": [
+    "10.12.2.8",
+    "10.12.0.40",
+    "10.12.2.16"
+  ],
+  "protocol": "http",
+  "query": {},
+  "subdomains": [],
+  "xhr": false,
+  "os": {
+    "hostname": "echoserver-2-deployment-6f499cfbbb-fqh25"
+  },
+  "connection": {}
+* Connection #0 to host zone1 left intact
+}
 ```
   
 </details>
