@@ -715,7 +715,7 @@ Annotate a service (zone1) (cluster2)
 
 #### fgtsingle1_eip
 ```
-% curl 35.180.16.215/app2   #fgtsingle2_eip
+% curl 35.180.16.215/app2
 {
   "path": "/app2",
   "headers": {
