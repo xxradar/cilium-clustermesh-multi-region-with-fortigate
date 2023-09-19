@@ -211,13 +211,14 @@ kubectl run -it -n app-routable-demo --rm --image xxradar/hackon mycurler -- bas
 ```
 result 1
 ```
-<details>
+</details>
 <details>
 <summary>Result cluster2</summary>
 ```
 result 2
 ```
-<details>
+</details>
+
 ### Connectivity test global service sharing
 Annotate a service (zone1)
 ```
