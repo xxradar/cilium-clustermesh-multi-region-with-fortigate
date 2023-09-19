@@ -201,7 +201,7 @@ The ultimate goal is to create following app deployment.<br>
 Currently the application is not **globably shared`** accross both clusters.
 
 ### Connectivity test w/o service sharing
-On both clusters, run follwoung test:
+On both clusters, run following test:
 ```
 kubectl run -it -n app-routable-demo --rm --image xxradar/hackon mycurler -- bash
        curl -v -H "Cookie: loc=client" http://zone1/app3
