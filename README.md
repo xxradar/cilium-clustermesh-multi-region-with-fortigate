@@ -193,12 +193,32 @@ Additionally, you need to create a firewall rule allowing access from the intern
 </p> 
 
 ## Testing the clustermesh
-### Enable sharing
+### App architecture
 The ultimate goal is to create following app deployment.<br>
 <p align="center">
 <img src="./images/microservice-mesh.png"  width="600" align="center" /><br>
-</p> 
+</p> <br>
+Currently the application is not **globably shared`** accross both clusters.
 
+### Connectivity test w/o service sharing
+On both clusters, run follwoung test:
+```
+kubectl run -it -n app-routable-demo --rm --image xxradar/hackon mycurler -- bash
+       curl -v -H "Cookie: loc=client" http://zone1/app3
+```
+<details>
+<summary>Result cluster1 </summary>
+```
+result 1
+```
+<details>
+<details>
+<summary>Result cluster2</summary>
+```
+result 2
+```
+<details>
+### Connectivity test global service sharing
 Annotate a service (zone1)
 ```
   annotations:
