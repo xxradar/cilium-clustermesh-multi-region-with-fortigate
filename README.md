@@ -180,9 +180,11 @@ cd ./app_routable_demo
 ./setup.sh
 watch kubectl get po -n app-routable-demo -o wide
 ```
+
 Optional:
 <details>
 <summary>Configure Cilium Ingress</summary>
+  
 ```
 kubectl apply -f ./app_routable_demo/ingress_cilium.yaml
 ```
@@ -190,15 +192,10 @@ Additionally, you need to create a firewall rule allowing access from the intern
 <p align="center">
 <img src="./images/vpn-setup-1.png"  width="1000" align="center" /><br>
 </p> <br>
+
 </details>
 
 ## Testing the clustermesh
-
-<p align="center">
-<img src="./images/ingress-fw-rule.png"  width="600" align="center" />
-</p>
-<br>
-
 ### Enable sharing
 Annotate a service (zone1)
 ```
