@@ -189,6 +189,7 @@ Additionally, you need to create a firewall rule allowing access from the intern
 <p align="center">
 <img src="./images/ingress-fw-rule.png"  width="1000" align="center" /><br>
 </p> 
+
 ## Testing the clustermesh
 ### Enable sharing
 Annotate a service (zone1)
