@@ -625,6 +625,9 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
 
 
 # Ingress testing
+<details>
+<summary>Igress results </summary>
+  
 #### fgtsingle1_eip
 ```
 % curl 35.180.16.215/app2
@@ -787,3 +790,5 @@ Annotate a service (zone1) (cluster2)
   "connection": {}
 }
 ```
+
+</details>
