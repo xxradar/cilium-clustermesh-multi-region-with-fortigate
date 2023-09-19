@@ -625,6 +625,11 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
 
 
 ### Ingress testing
+<p align="center">
+<img src="./images/clustermesh_ingress.png"  width="1000" align="center" /><br>
+</p> 
+
+
 <details>
 <summary>Ingress results </summary>
   
