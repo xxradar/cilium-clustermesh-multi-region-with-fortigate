@@ -624,11 +624,11 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
 </details>
 
 
-# Ingress testing
+### Ingress testing
 <details>
 <summary>Ingress results </summary>
   
-#### fgtsingle1_eip
+### fgtsingle1_eip
 ```
 % curl 35.180.16.215/app2
 {
@@ -665,7 +665,7 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
   "connection": {}
 }
 ```
-#### fgtsingle2_eip
+### fgtsingle2_eip
 ```
 % curl 34.242.99.90/app1
 {
@@ -702,7 +702,7 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
   "connection": {}
 }
 ```
-#### Annotations
+### Annotations
 Annotate a service (zone1) (cluster1)
 ```
   annotations:
@@ -716,7 +716,7 @@ Annotate a service (zone1) (cluster2)
     service.cilium.io/shared: "false"
 ```
 
-#### fgtsingle1_eip
+### fgtsingle1_eip
 ```
 % curl 35.180.16.215/app2
 {
