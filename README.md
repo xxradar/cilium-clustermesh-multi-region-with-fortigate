@@ -206,6 +206,7 @@ On both clusters, run follwoung test:
 kubectl run -it -n app-routable-demo --rm --image xxradar/hackon mycurler -- bash
        curl -v -H "Cookie: loc=client" http://zone1/app3
 ```
+
 <details>
 <summary>Result cluster1 </summary>
 ```
@@ -215,6 +216,7 @@ result 1
 </details>
 <details>
 <summary>Result cluster2</summary>
+
 ```
 result 2
 ```
