@@ -196,7 +196,7 @@ Additionally, you need to create a firewall rule allowing access from the intern
 ### Enable sharing
 The ultimate goal is to create following app deployment.<br>
 <p align="center">
-<img src="./images/microservice-mesh.png"  width="1000" align="center" /><br>
+<img src="./images/microservice-mesh.png"  width="600" align="center" /><br>
 </p> 
 
 Annotate a service (zone1)
