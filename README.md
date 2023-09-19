@@ -748,6 +748,7 @@ Annotate a service (zone1) (cluster2)
     "hostname": "echoserver-2-deployment-6f499cfbbb-fqh25"
   },
   "connection": {}
+}
 ```
 #### fgtsingle2_eip
 ```
