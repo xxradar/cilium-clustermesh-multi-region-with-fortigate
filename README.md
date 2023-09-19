@@ -311,17 +311,17 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
 * Mark bundle as not supporting multiuse
 < HTTP/1.1 200 OK
 < Server: nginx/1.25.2
-< Date: Tue, 19 Sep 2023 10:36:05 GMT
+< Date: Tue, 19 Sep 2023 10:38:01 GMT
 < Content-Type: application/json; charset=utf-8
-< Content-Length: 599
+< Content-Length: 603
 < Connection: keep-alive
 < X-Powered-By: Express
-< ETag: W/"257-Mmb5CgkkHo7VM6x8rH6j79sP44I"
+< ETag: W/"25b-Sh6Qc2jjVtVZLUmH1G3UFezpX0E"
 <
 {
   "path": "/app3",
   "headers": {
-    "x-forwarded-for": "10.12.2.122, 10.12.0.40, 10.12.2.16",
+    "x-forwarded-for": "10.12.2.122, 10.10.2.183, 10.10.1.240",
     "cookie": "loc=client, loc=zone1, loc=zone3, loc=zone5",
     "host": "zone7",
     "connection": "close",
@@ -335,15 +335,15 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
   "ip": "10.12.2.122",
   "ips": [
     "10.12.2.122",
-    "10.12.0.40",
-    "10.12.2.16"
+    "10.10.2.183",
+    "10.10.1.240"
   ],
   "protocol": "http",
   "query": {},
   "subdomains": [],
   "xhr": false,
   "os": {
-    "hostname": "echoserver-2-deployment-6f499cfbbb-f754s"
+    "hostname": "echoserver-2-deployment-6f499cfbbb-7kztt"
   },
   "connection": {}
 * Connection #0 to host zone1 left intact
