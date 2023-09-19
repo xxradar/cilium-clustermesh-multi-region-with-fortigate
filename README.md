@@ -188,8 +188,7 @@ kubectl apply -f ./app_routable_demo/ingress_cilium.yaml
 Additionally, you need to create a firewall rule allowing access from the internet towards the ingress nodeports.
 <p align="center">
 <img src="./images/ingress-fw-rule.png"  width="1000" align="center" /><br>
-</p> <br>
-
+</p> 
 ## Testing the clustermesh
 ### Enable sharing
 Annotate a service (zone1)
