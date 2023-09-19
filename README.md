@@ -62,6 +62,8 @@ Repeat process for terraform-k8s-2
 ## Deploying the clustermesh
 ### Install pre-requisite tooling
 On both clusters:
+<details>
+<summary>Install required tooling </summary>
 ```
 CILIUM_CLI_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/cilium-cli/main/stable.txt)
 CLI_ARCH=amd64
@@ -82,6 +84,8 @@ rm hubble-linux-amd64.tar.gz{,.sha256sum}
 sudo snap install helm --classic
 helm repo add cilium https://helm.cilium.io/
 ```
+</details>
+
 ### Install Cilium CNI on cluster1
 ```
 helm install cilium cilium/cilium --version 1.14.2 \
