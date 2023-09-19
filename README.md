@@ -255,7 +255,8 @@ result 2
 ```
   
 </details>
-### Disable sharing
+
+### Disable sharing on cluster2
 Annotate a service (zone1)
 ```
   annotations:
