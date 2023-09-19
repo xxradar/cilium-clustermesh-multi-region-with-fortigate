@@ -625,8 +625,9 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
 
 
 # Ingress testing
+#### fgtsingle1_eip
 ```
-% curl 35.180.16.215/app2   #fgtsingle1_eip
+% curl 35.180.16.215/app2
 {
   "path": "/app2",
   "headers": {
@@ -661,6 +662,7 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
   "connection": {}
 }
 ```
+#### fgtsingle2_eip
 ```
 % curl 34.242.99.90/app1   #fgtsingle2_eip
 {
@@ -675,6 +677,93 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
     "x-forwarded-proto": "http",
     "x-envoy-external-address": "84.192.8.14",
     "x-request-id": "b45d921d-a2e4-4a98-963e-04cf2e345ee5"
+  },
+  "method": "GET",
+  "body": "",
+  "fresh": false,
+  "hostname": "zone6",
+  "ip": "84.192.8.14",
+  "ips": [
+    "84.192.8.14",
+    "10.12.2.54",
+    "10.12.0.40",
+    "10.12.0.239"
+  ],
+  "protocol": "http",
+  "query": {},
+  "subdomains": [],
+  "xhr": false,
+  "os": {
+    "hostname": "echoserver-1-deployment-695c7db8d-ljnw6"
+  },
+  "connection": {}
+}
+```
+#### Annotations
+Annotate a service (zone1) (cluster1)
+```
+  annotations:
+    service.cilium.io/global: "true"
+    service.cilium.io/shared: "true"
+```
+Annotate a service (zone1) (cluster2)
+```
+  annotations:
+    service.cilium.io/global: "true"
+    service.cilium.io/shared: "false"
+```
+
+#### fgtsingle1_eip
+```
+% curl 35.180.16.215/app2   #fgtsingle2_eip
+{
+  "path": "/app2",
+  "headers": {
+    "x-forwarded-for": "84.192.8.14, 10.10.2.138, 10.12.0.40, 10.12.0.239",
+    "cookie": ", loc=zone1, loc=zone2, loc=zone5",
+    "host": "zone7",
+    "connection": "close",
+    "user-agent": "curl/8.1.2",
+    "accept": "*/*",
+    "x-forwarded-proto": "http",
+    "x-envoy-external-address": "84.192.8.14",
+    "x-request-id": "65deeed9-0c1b-406a-b078-69de93451ef2"
+  },
+  "method": "GET",
+  "body": "",
+  "fresh": false,
+  "hostname": "zone7",
+  "ip": "84.192.8.14",
+  "ips": [
+    "84.192.8.14",
+    "10.10.2.138",
+    "10.12.0.40",
+    "10.12.0.239"
+  ],
+  "protocol": "http",
+  "query": {},
+  "subdomains": [],
+  "xhr": false,
+  "os": {
+    "hostname": "echoserver-2-deployment-6f499cfbbb-fqh25"
+  },
+  "connection": {}
+```
+#### fgtsingle2_eip
+```
+ curl 34.242.99.90/app1
+{
+  "path": "/app1",
+  "headers": {
+    "x-forwarded-for": "84.192.8.14, 10.12.2.54, 10.12.0.40, 10.12.0.239",
+    "cookie": ", loc=zone1, loc=zone2, loc=zone4",
+    "host": "zone6",
+    "connection": "close",
+    "user-agent": "curl/8.1.2",
+    "accept": "*/*",
+    "x-forwarded-proto": "http",
+    "x-envoy-external-address": "84.192.8.14",
+    "x-request-id": "c7425a21-cc19-4d45-b64e-05e8ffe7323d"
   },
   "method": "GET",
   "body": "",
