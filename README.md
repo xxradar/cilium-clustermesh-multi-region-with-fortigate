@@ -181,7 +181,8 @@ Combine both `.kube/config` files
 - make sure context names are different
 <br>
 
-Follow these steps:
+Follow these steps:<br>
+On **cluster1**
 ```
 cp .kube/config cluster1.yaml
 ```
