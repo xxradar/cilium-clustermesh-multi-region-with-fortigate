@@ -505,7 +505,7 @@ root@mycurler:/# curl -v -H "Cookie: loc=client" http://zone1/app3
 </details>
 
 ### Disable sharing on cluster2
-Annotate a service (zone1)
+Annotate a service (zone1) (cluster2)
 ```
   annotations:
     service.cilium.io/global: "true"
