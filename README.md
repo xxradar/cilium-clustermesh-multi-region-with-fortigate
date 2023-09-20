@@ -57,9 +57,9 @@ cd terraform-k8s-1
 terraform init
 terraform apply
 ```
-Repeat process for terraform-k8s-2<br>
+Repeat process for terraform-k8s-2.<br>
 Wait for a few minutes for all boxes to initialise.<br>
-Then run in both terraform-k8s-1 and terraform-k8s-2 folder
+Then run in both terraform-k8s-1 and terraform-k8s-2 folder:
 ```
 creds.sh 1
 ```
