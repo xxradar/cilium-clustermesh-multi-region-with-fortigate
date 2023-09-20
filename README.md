@@ -57,7 +57,24 @@ cd terraform-k8s-1
 terraform init
 terraform apply
 ```
-Repeat process for terraform-k8s-2
+Repeat process for terraform-k8s-2<br>
+Wait for a few minutes for all boxes to initialise.<br>
+Then run in both terraform-k8s-1 and terraform-k8s-2 folder
+```
+creds.sh 1
+```
+You can now access the jumpboxes in both regions
+```
+ssh -i key0.pem ubuntu@<jumpbox>
+```
+From the jumpbox, you can access the k8s master nodes
+```
+ssh -i key.pem ubuntu@<k8s_master>
+```
+You can always find the IP addresses by running
+```
+terraform output
+```
 
 ## Deploying the clustermesh
 ### Install pre-requisite tooling
