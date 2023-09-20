@@ -805,3 +805,83 @@ Annotate a service (zone1) (cluster2)
 ```
 
 </details>
+
+
+<details>
+<summary>GSLB results </summary>
+  
+### AMS DC
+```
+root@ubuntu-s-2vcpu-4gb-amd-ams3-01:~# curl app-demo.kubiosec.tech/app2
+{
+  "path": "/app2",
+  "headers": {
+    "x-forwarded-for": "167.99.41.154, 10.10.2.138, 10.12.0.40, 10.12.0.239",
+    "cookie": ", loc=zone1, loc=zone2, loc=zone5",
+    "host": "zone7",
+    "connection": "close",
+    "user-agent": "curl/7.81.0",
+    "accept": "*/*",
+    "x-forwarded-proto": "http",
+    "x-envoy-external-address": "167.99.41.154",
+    "x-request-id": "e921a999-83d1-4abe-af4c-cf2d26c8545f"
+  },
+  "method": "GET",
+  "body": "",
+  "fresh": false,
+  "hostname": "zone7",
+  "ip": "167.99.41.154",
+  "ips": [
+    "167.99.41.154",
+    "10.10.2.138",
+    "10.12.0.40",
+    "10.12.0.239"
+  ],
+  "protocol": "http",
+  "query": {},
+  "subdomains": [],
+  "xhr": false,
+  "os": {
+    "hostname": "echoserver-2-deployment-6f499cfbbb-fqh25"
+  },
+  "connection": {}
+}
+```
+### NY DC
+```
+root@ubuntu-s-2vcpu-4gb-amd-nyc3-01:~# curl http://app-demo.kubiosec.tech/app1
+{
+  "path": "/app1",
+  "headers": {
+    "x-forwarded-for": "174.138.84.160, 10.12.2.54, 10.12.0.40, 10.12.0.239",
+    "cookie": ", loc=zone1, loc=zone2, loc=zone4",
+    "host": "zone6",
+    "connection": "close",
+    "user-agent": "curl/7.81.0",
+    "accept": "*/*",
+    "x-forwarded-proto": "http",
+    "x-envoy-external-address": "174.138.84.160",
+    "x-request-id": "50e838d4-72a5-411d-93fc-84a0113d1d3c"
+  },
+  "method": "GET",
+  "body": "",
+  "fresh": false,
+  "hostname": "zone6",
+  "ip": "174.138.84.160",
+  "ips": [
+    "174.138.84.160",
+    "10.12.2.54",
+    "10.12.0.40",
+    "10.12.0.239"
+  ],
+  "protocol": "http",
+  "query": {},
+  "subdomains": [],
+  "xhr": false,
+  "os": {
+    "hostname": "echoserver-1-deployment-695c7db8d-hbnw6"
+  },
+  "connection": {}
+}
+```
+</details>
