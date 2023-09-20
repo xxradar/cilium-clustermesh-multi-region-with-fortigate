@@ -75,6 +75,27 @@ You can always find the IP addresses by running
 ```
 terraform output
 ```
+It should look like
+```
+backend_private_ip = [
+  "10.1.1.203",
+]
+instancecount = 1
+jumbox_public_ip = [
+  "15.246.227.203",
+]
+k8nodes_private_ip = [
+  [
+    "10.1.1.214",
+    "10.1.1.51",
+  ],
+]
+k8smaster_private_ip = [
+  "10.1.1.143",
+]
+private_key = <sensitive>
+worker_count = 2
+```
 
 ## Deploying the clustermesh
 ### Install pre-requisite tooling
