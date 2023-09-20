@@ -810,7 +810,7 @@ Annotate a service (zone1) (cluster2)
 <details>
 <summary>GSLB results </summary>
   
-### AMS DC
+### AMS DC client
 ```
 root@ubuntu-s-2vcpu-4gb-amd-ams3-01:~# curl app-demo.kubiosec.tech/app2
 {
@@ -847,7 +847,7 @@ root@ubuntu-s-2vcpu-4gb-amd-ams3-01:~# curl app-demo.kubiosec.tech/app2
   "connection": {}
 }
 ```
-### NY DC
+### NY DC client
 ```
 root@ubuntu-s-2vcpu-4gb-amd-nyc3-01:~# curl http://app-demo.kubiosec.tech/app1
 {
