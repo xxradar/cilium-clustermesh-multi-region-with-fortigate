@@ -48,8 +48,8 @@ Give it some minutes. The `terraform output` will provide login details and IP a
 </p> <br>
 </details>
 
-## Deploying kubernetes and jumpbox
-In the next step, a 3-node kubernetes cluster is deployed, together with a jumpbox and backend test server.<br>
+## Deploying Kubernetes and jumpbox
+In the next step, a 3-node Kubernetes cluster is deployed, together with a jumpbox and backend test server.<br>
 Rename `terraform.tfvars.example` to `terraform.tfvars` and populate the variables.<br>
 The information can be obtained from the `terraform output` for both fortigate deployments.
 ```
@@ -176,8 +176,8 @@ cilium clustermesh enable --service-type NodePort
 ```
 ### Create a kubeconfig with access to both clusters
 Combine both `.kube/config` files
-- make sure clusternames are different
-- make sure usernames are differemt
+- make sure cluster names are different
+- make sure usernames are different
 - make sure context names are different
 <br>
 
