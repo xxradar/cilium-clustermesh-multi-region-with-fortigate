@@ -58,11 +58,12 @@ terraform init
 terraform apply
 ```
 Repeat process for terraform-k8s-2.<br>
-Wait for a few minutes for all boxes to initialise.<br>
+Wait for a few minutes for all boxes to initialise.<br><br>
 Then run in both terraform-k8s-1 and terraform-k8s-2 folder:
 ```
 creds.sh 1
 ```
+ Wait for a few minutes for all boxes to initialise.<br><br>
 You can now access the jumpboxes in both regions
 ```
 ssh -i key0.pem ubuntu@<jumpbox>
