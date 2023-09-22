@@ -924,3 +924,10 @@ root@ubuntu-s-2vcpu-4gb-amd-nyc3-01:~# curl http://app-demo.kubiosec.tech/app1
 }
 ```
 </details>
+<details>
+  <summary>Latency</summary>
+<p align="center">
+<img src="./images/timing1.png"  width="600" align="center" /><br><br>
+<img src="./images/timing2.png"  width="1000" align="center" />
+</p> <br>
+</details>
